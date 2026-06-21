@@ -1,0 +1,247 @@
+/* =========================================================
+   ASIA HOLDINGS — Portfolio Site
+   Custom styles layered on top of Tailwind (CDN).
+   Theme: black + gold, "holdings ledger" motif.
+   ========================================================= */
+
+::selection {
+  background: #D4AF37;
+  color: #0B0B0A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0B0A;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0B0B0A; }
+::-webkit-scrollbar-thumb { background: #2A271E; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #8C6D1F; }
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+#site-header {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+#site-header.scrolled {
+  background: rgba(11, 11, 10, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #2A271E;
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 6px;
+  color: #92897A;
+  transition: color 0.25s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #D4AF37;
+  transition: width 0.25s ease;
+}
+.nav-link:hover {
+  color: #F3EEE3;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: #D4AF37;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   Ticker / marquee — the signature element
+   ========================================================= */
+.ticker-wrap {
+  overflow: hidden;
+  border-top: 1px solid #2A271E;
+  border-bottom: 1px solid #2A271E;
+  background: #0B0B0A;
+}
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 38s linear infinite;
+}
+.ticker-wrap:hover .ticker-track {
+  animation-play-state: paused;
+}
+.ticker-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.12em;
+}
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* =========================================================
+   Scroll reveal
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   Holding / certificate cards
+   ========================================================= */
+.card-cert {
+  position: relative;
+  background: #15140F;
+  border: 1px solid #2A271E;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.card-cert:hover {
+  border-color: #8C6D1F;
+  background: #1C1A14;
+  transform: translateY(-4px);
+}
+.card-cert::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border-top: 2px solid #D4AF37;
+  border-left: 2px solid #D4AF37;
+  opacity: 0.8;
+}
+.card-cert::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-bottom: 2px solid #D4AF37;
+  border-right: 2px solid #D4AF37;
+  opacity: 0.8;
+}
+
+/* Hairline divider */
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8C6D1F, transparent);
+}
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #D4AF37;
+  color: #0B0B0A;
+  padding: 0.85rem 1.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.btn-gold:hover {
+  background: #E9CA6D;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #F3EEE3;
+  border: 1px solid #8C6D1F;
+  padding: 0.85rem 1.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.btn-outline:hover {
+  border-color: #D4AF37;
+  color: #D4AF37;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   Forms
+   ========================================================= */
+.field-input {
+  width: 100%;
+  background: #15140F;
+  border: 1px solid #2A271E;
+  color: #F3EEE3;
+  padding: 0.9rem 1rem;
+  transition: border-color 0.25s ease;
+  font-family: 'Work Sans', sans-serif;
+}
+.field-input::placeholder {
+  color: #5C574A;
+}
+.field-input:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+/* =========================================================
+   Misc utilities
+   ========================================================= */
+.text-stroke-gold {
+  -webkit-text-stroke: 1px #D4AF37;
+  color: transparent;
+}
+
+.bg-grain {
+  background-image: radial-gradient(circle at 1px 1px, rgba(212,175,55,0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Reduced motion: calm everything down */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track { animation: none; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-cert:hover { transform: none; }
+  .btn-gold:hover, .btn-outline:hover { transform: none; }
+}

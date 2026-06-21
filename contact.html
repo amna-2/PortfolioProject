@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Asia Holdings</title>
+<meta name="description" content="Get in touch with Asia Holdings — for orders, partnerships, or a growth project with Asia Digital.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#0B0B0A', panel: '#15140F', panel2: '#1C1A14',
+          gold: '#D4AF37', goldlight: '#E9CA6D', golddeep: '#8C6D1F',
+          ivory: '#F3EEE3', stone: '#92897A', line: '#2A271E',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['"Work Sans"', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-void text-ivory font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" class="font-display text-2xl tracking-wide text-ivory">ASIA <span class="text-gold">HOLDINGS</span></a>
+    <nav class="hidden md:flex items-center gap-9 font-mono text-[11px] uppercase tracking-widest">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-ivory">
+      <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-void/97 backdrop-blur border-t border-line px-6 py-6">
+    <nav class="flex flex-col gap-5 font-mono text-xs uppercase tracking-widest">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="pt-44 pb-16 px-6 lg:px-10 bg-grain">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-gold mb-6 reveal">Get in Touch</p>
+    <h1 class="font-display font-light text-5xl sm:text-7xl leading-[1.0] mb-8 reveal">Let's talk.</h1>
+    <p class="max-w-2xl text-stone text-lg leading-relaxed reveal">
+      Orders, partnerships, or a growth project for Asia Digital — send a message
+      and we'll get back to you directly.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CONTACT GRID ============ -->
+<section class="px-6 lg:px-10 py-12 pb-28">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.4fr] gap-16">
+
+    <!-- Contact info -->
+    <div class="reveal">
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-6">Direct</p>
+      <ul class="space-y-5 mb-12">
+        <li>
+          <p class="text-xs text-stone uppercase tracking-widest mb-1">Email</p>
+          <a href="mailto:hello@asiaholdings.example" class="text-lg hover:text-gold transition-colors">hello@asiaholdings.example</a>
+        </li>
+        <li>
+          <p class="text-xs text-stone uppercase tracking-widest mb-1">Phone</p>
+          <a href="tel:+920000000000" class="text-lg hover:text-gold transition-colors">+92 000 000 0000</a>
+        </li>
+        <li>
+          <p class="text-xs text-stone uppercase tracking-widest mb-1">Based In</p>
+          <p class="text-lg">Multan, Punjab, Pakistan</p>
+        </li>
+      </ul>
+
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-6">Find Us Online</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://www.asiatraders1.com/" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-widest border border-line px-4 py-2 hover:border-gold hover:text-gold transition-colors">Asia Traders</a>
+        <a href="https://asiastore.com.pk/" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-widest border border-line px-4 py-2 hover:border-gold hover:text-gold transition-colors">Asia Store</a>
+        <a href="https://www.thecustomizer.com.pk/" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-widest border border-line px-4 py-2 hover:border-gold hover:text-gold transition-colors">The Customizer</a>
+        <a href="https://www.etsy.com/shop/EagerCustom" target="_blank" rel="noopener" class="font-mono text-xs uppercase tracking-widest border border-line px-4 py-2 hover:border-gold hover:text-gold transition-colors">Eager Custom</a>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="contact-form" class="reveal" novalidate>
+      <div class="grid sm:grid-cols-2 gap-5 mb-5">
+        <div>
+          <label for="name" class="block text-xs uppercase tracking-widest text-stone mb-2">Name</label>
+          <input type="text" id="name" name="name" class="field-input" placeholder="Your full name">
+        </div>
+        <div>
+          <label for="email" class="block text-xs uppercase tracking-widest text-stone mb-2">Email</label>
+          <input type="email" id="email" name="email" class="field-input" placeholder="you@example.com">
+        </div>
+      </div>
+      <div class="mb-5">
+        <label for="brand" class="block text-xs uppercase tracking-widest text-stone mb-2">Which Holding Is This About?</label>
+        <select id="brand" name="brand" class="field-input">
+          <option value="">General Inquiry</option>
+          <option value="asia-traders">Asia Traders</option>
+          <option value="asia-store">Asia Store</option>
+          <option value="the-customizer">The Customizer</option>
+          <option value="scents-by-asia">Scents by Asia</option>
+          <option value="eager-custom">Eager Custom</option>
+          <option value="asia-digital">Asia Digital (Services)</option>
+        </select>
+      </div>
+      <div class="mb-6">
+        <label for="message" class="block text-xs uppercase tracking-widest text-stone mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" class="field-input" placeholder="Tell us what you need..."></textarea>
+      </div>
+      <button type="submit" class="btn-gold w-full sm:w-auto justify-center">Send Message →</button>
+      <p id="form-status" class="hidden mt-5 text-sm"></p>
+
+      <p class="text-xs text-stone mt-8 leading-relaxed">
+        Note for the client: this form validates on the front end but isn't
+        wired to send email yet. Connect it to a service like
+        <a href="https://formspree.io" target="_blank" rel="noopener" class="underline hover:text-gold">Formspree</a>
+        or <a href="https://www.emailjs.com" target="_blank" rel="noopener" class="underline hover:text-gold">EmailJS</a>
+        to start receiving real submissions.
+      </p>
+    </form>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line px-6 lg:px-10 py-16">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
+    <div>
+      <p class="font-display text-xl mb-4">ASIA <span class="text-gold">HOLDINGS</span></p>
+      <p class="text-sm text-stone leading-relaxed">A portfolio of six brands built in Multan, Pakistan — retail, custom gifting, fragrance, jewellery, and digital growth.</p>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Holdings</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="https://www.asiatraders1.com/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Asia Traders</a></li>
+        <li><a href="https://asiastore.com.pk/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Asia Store</a></li>
+        <li><a href="https://www.thecustomizer.com.pk/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">The Customizer</a></li>
+        <li><a href="brands.html" class="hover:text-gold transition-colors">Scents by Asia</a></li>
+        <li><a href="https://www.etsy.com/shop/EagerCustom" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Eager Custom</a></li>
+        <li><a href="services.html" class="hover:text-gold transition-colors">Asia Digital</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Site</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="about.html" class="hover:text-gold transition-colors">About</a></li>
+        <li><a href="locations.html" class="hover:text-gold transition-colors">Locations</a></li>
+        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Connect</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="mailto:hello@asiaholdings.example" class="hover:text-gold transition-colors">hello@asiaholdings.example</a></li>
+        <li><a href="tel:+920000000000" class="hover:text-gold transition-colors">+92 000 000 0000</a></li>
+        <li class="text-stone">Multan, Punjab, Pakistan</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hairline mb-8"></div>
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone font-mono">
+    <p>© <span id="current-year"></span> Asia Holdings. All rights reserved.</p>
+    <p>Built with intent — black &amp; gold, by design.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

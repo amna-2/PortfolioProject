@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brands — Asia Holdings</title>
+<meta name="description" content="Explore all six brands in the Asia Holdings portfolio — Asia Traders, Asia Store, The Customizer, Scents by Asia, Eager Custom, and Asia Digital.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#0B0B0A', panel: '#15140F', panel2: '#1C1A14',
+          gold: '#D4AF37', goldlight: '#E9CA6D', golddeep: '#8C6D1F',
+          ivory: '#F3EEE3', stone: '#92897A', line: '#2A271E',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['"Work Sans"', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-void text-ivory font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" class="font-display text-2xl tracking-wide text-ivory">ASIA <span class="text-gold">HOLDINGS</span></a>
+    <nav class="hidden md:flex items-center gap-9 font-mono text-[11px] uppercase tracking-widest">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-ivory">
+      <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-void/97 backdrop-blur border-t border-line px-6 py-6">
+    <nav class="flex flex-col gap-5 font-mono text-xs uppercase tracking-widest">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="pt-44 pb-16 px-6 lg:px-10 bg-grain">
+  <div class="max-w-5xl mx-auto">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-gold mb-6 reveal">Holdings Register</p>
+    <h1 class="font-display font-light text-5xl sm:text-7xl leading-[1.0] mb-8 reveal">The Portfolio.</h1>
+    <p class="max-w-2xl text-stone text-lg leading-relaxed reveal">
+      Six brands, six categories, one operator. Each one below is run as its own
+      business — its own catalogue, its own customers — and sits within the
+      same portfolio of holdings.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FILTER ============ -->
+<section class="px-6 lg:px-10 pb-6">
+  <div class="max-w-7xl mx-auto flex flex-wrap gap-3" id="filter-bar">
+    <button data-filter="all" class="filter-btn font-mono text-xs uppercase tracking-widest px-4 py-2 border border-gold text-gold">All</button>
+    <button data-filter="retail" class="filter-btn font-mono text-xs uppercase tracking-widest px-4 py-2 border border-line text-stone hover:border-gold hover:text-gold transition-colors">Retail</button>
+    <button data-filter="gifting" class="filter-btn font-mono text-xs uppercase tracking-widest px-4 py-2 border border-line text-stone hover:border-gold hover:text-gold transition-colors">Custom Gifting</button>
+    <button data-filter="fragrance" class="filter-btn font-mono text-xs uppercase tracking-widest px-4 py-2 border border-line text-stone hover:border-gold hover:text-gold transition-colors">Fragrance</button>
+    <button data-filter="jewellery" class="filter-btn font-mono text-xs uppercase tracking-widest px-4 py-2 border border-line text-stone hover:border-gold hover:text-gold transition-colors">Jewellery</button>
+    <button data-filter="digital" class="filter-btn font-mono text-xs uppercase tracking-widest px-4 py-2 border border-line text-stone hover:border-gold hover:text-gold transition-colors">Digital Services</button>
+  </div>
+</section>
+
+<!-- ============ BRAND GRID ============ -->
+<section class="px-6 lg:px-10 py-12">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line" id="brand-grid">
+
+    <!-- Asia Traders -->
+    <article data-category="retail" class="card-cert p-9 flex flex-col reveal">
+      <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 01</p>
+      <h3 class="font-display text-2xl mb-1">Asia Traders</h3>
+      <p class="font-mono text-[11px] uppercase tracking-widest text-stone mb-5">Mobile Accessories</p>
+      <p class="text-sm text-stone leading-relaxed mb-8 flex-1">
+        Cases, chargers, audio gear, and everyday tech essentials — built around
+        fast-moving retail and dependable stock.
+      </p>
+      <a href="https://www.asiatraders1.com/" target="_blank" rel="noopener" class="btn-outline self-start">Visit Site →</a>
+    </article>
+
+    <!-- Asia Store -->
+    <article data-category="gifting" class="card-cert p-9 flex flex-col reveal">
+      <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 02</p>
+      <h3 class="font-display text-2xl mb-1">Asia Store</h3>
+      <p class="font-mono text-[11px] uppercase tracking-widest text-stone mb-5">Custom Gifting</p>
+      <p class="text-sm text-stone leading-relaxed mb-8 flex-1">
+        Personalized gifts for every occasion, from engraved keepsakes to curated
+        hampers — now running across two active storefronts.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="https://asiastore.com.pk/" target="_blank" rel="noopener" class="btn-outline">asiastore.com.pk →</a>
+        <a href="https://asiastore1.com/" target="_blank" rel="noopener" class="btn-outline">asiastore1.com →</a>
+      </div>
+    </article>
+
+    <!-- The Customizer -->
+    <article data-category="gifting" class="card-cert p-9 flex flex-col reveal">
+      <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 03</p>
+      <h3 class="font-display text-2xl mb-1">The Customizer</h3>
+      <p class="font-mono text-[11px] uppercase tracking-widest text-stone mb-5">Custom Gifting</p>
+      <p class="text-sm text-stone leading-relaxed mb-8 flex-1">
+        A dedicated studio for bespoke gifting — mugs, frames, apparel, and more,
+        tailored to the exact specification of every order.
+      </p>
+      <a href="https://www.thecustomizer.com.pk/" target="_blank" rel="noopener" class="btn-outline self-start">Visit Site →</a>
+    </article>
+
+    <!-- Scents by Asia -->
+    <article data-category="fragrance" class="card-cert p-9 flex flex-col reveal">
+      <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 04</p>
+      <h3 class="font-display text-2xl mb-1">Scents by Asia</h3>
+      <p class="font-mono text-[11px] uppercase tracking-widest text-stone mb-5">Fragrance</p>
+      <p class="text-sm text-stone leading-relaxed mb-8 flex-1">
+        A curated line of fragrances built to capture a distinct, lasting
+        impression — the newest holding in the portfolio.
+      </p>
+      <span class="font-mono text-xs uppercase tracking-widest text-stone border border-line px-4 py-2 self-start">Storefront Coming Soon</span>
+    </article>
+
+    <!-- Eager Custom -->
+    <article data-category="jewellery" class="card-cert p-9 flex flex-col reveal">
+      <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 05</p>
+      <h3 class="font-display text-2xl mb-1">Eager Custom</h3>
+      <p class="font-mono text-[11px] uppercase tracking-widest text-stone mb-5">Global Custom Jewellery</p>
+      <p class="text-sm text-stone leading-relaxed mb-8 flex-1">
+        Custom jewellery designed and shipped worldwide — the portfolio's only
+        fully international, direct-to-global-consumer brand.
+      </p>
+      <a href="https://www.etsy.com/shop/EagerCustom" target="_blank" rel="noopener" class="btn-outline self-start">Visit Shop →</a>
+    </article>
+
+    <!-- Asia Digital -->
+    <article data-category="digital" class="card-cert p-9 flex flex-col reveal">
+      <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 06</p>
+      <h3 class="font-display text-2xl mb-1">Asia Digital</h3>
+      <p class="font-mono text-[11px] uppercase tracking-widest text-stone mb-5">Shopify · Ads · Consultancy</p>
+      <p class="text-sm text-stone leading-relaxed mb-8 flex-1">
+        Shopify builds, Meta &amp; TikTok ads, product marketing, and business
+        consultancy — the in-house growth playbook, offered to outside brands.
+      </p>
+      <a href="services.html" class="btn-outline self-start">Explore Services →</a>
+    </article>
+
+  </div>
+
+  <p id="no-results" class="hidden text-center text-stone font-mono text-sm mt-12">No holdings in this category yet.</p>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="px-6 lg:px-10 py-24 text-center border-t border-line">
+  <div class="max-w-2xl mx-auto reveal">
+    <h2 class="font-display text-4xl sm:text-5xl mb-6">Looking to grow a brand of your own?</h2>
+    <p class="text-stone mb-10">Asia Digital can build the store, run the ads, and shape the strategy.</p>
+    <a href="services.html" class="btn-gold">See Asia Digital →</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line px-6 lg:px-10 py-16">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
+    <div>
+      <p class="font-display text-xl mb-4">ASIA <span class="text-gold">HOLDINGS</span></p>
+      <p class="text-sm text-stone leading-relaxed">A portfolio of six brands built in Multan, Pakistan — retail, custom gifting, fragrance, jewellery, and digital growth.</p>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Holdings</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="https://www.asiatraders1.com/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Asia Traders</a></li>
+        <li><a href="https://asiastore.com.pk/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Asia Store</a></li>
+        <li><a href="https://www.thecustomizer.com.pk/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">The Customizer</a></li>
+        <li><a href="brands.html" class="hover:text-gold transition-colors">Scents by Asia</a></li>
+        <li><a href="https://www.etsy.com/shop/EagerCustom" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Eager Custom</a></li>
+        <li><a href="services.html" class="hover:text-gold transition-colors">Asia Digital</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Site</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="about.html" class="hover:text-gold transition-colors">About</a></li>
+        <li><a href="locations.html" class="hover:text-gold transition-colors">Locations</a></li>
+        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Connect</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="mailto:hello@asiaholdings.example" class="hover:text-gold transition-colors">hello@asiaholdings.example</a></li>
+        <li><a href="tel:+920000000000" class="hover:text-gold transition-colors">+92 000 000 0000</a></li>
+        <li class="text-stone">Multan, Punjab, Pakistan</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hairline mb-8"></div>
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone font-mono">
+    <p>© <span id="current-year"></span> Asia Holdings. All rights reserved.</p>
+    <p>Built with intent — black &amp; gold, by design.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script>
+  // Brand filter (page-specific, kept separate from main.js)
+  document.addEventListener('DOMContentLoaded', function () {
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('#brand-grid > article');
+    var noResults = document.getElementById('no-results');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) {
+          b.classList.remove('border-gold', 'text-gold');
+          b.classList.add('border-line', 'text-stone');
+        });
+        btn.classList.add('border-gold', 'text-gold');
+        btn.classList.remove('border-line', 'text-stone');
+
+        var filter = btn.getAttribute('data-filter');
+        var visibleCount = 0;
+        cards.forEach(function (card) {
+          var match = filter === 'all' || card.getAttribute('data-category') === filter;
+          card.style.display = match ? '' : 'none';
+          if (match) visibleCount++;
+        });
+        noResults.classList.toggle('hidden', visibleCount !== 0);
+      });
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,43 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asia Holdings — A Portfolio of Brands</title>
+<meta name="description" content="Asia Holdings — six brands spanning retail, custom gifting, fragrance, jewelry, and digital growth, built from the ground up in Pakistan.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#0B0B0A', panel: '#15140F', panel2: '#1C1A14',
+          gold: '#D4AF37', goldlight: '#E9CA6D', golddeep: '#8C6D1F',
+          ivory: '#F3EEE3', stone: '#92897A', line: '#2A271E',
+        },
+        fontFamily: {
+          display: ['Fraunces', 'serif'],
+          body: ['"Work Sans"', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="container">
-        <h1>My Portfolio</h1>
-        <div class="section">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio.</p>
-        </div>
-        <div class="section">
-            <h2>Projects</h2>
-            <p>Coming soon...</p>
-        </div>
+<body class="bg-void text-ivory font-body antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" class="font-display text-2xl tracking-wide text-ivory">ASIA <span class="text-gold">HOLDINGS</span></a>
+
+    <nav class="hidden md:flex items-center gap-9 font-mono text-[11px] uppercase tracking-widest">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden text-ivory">
+      <svg id="icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-void/97 backdrop-blur border-t border-line px-6 py-6">
+    <nav class="flex flex-col gap-5 font-mono text-xs uppercase tracking-widest">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="brands.html" class="nav-link">Brands</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="locations.html" class="nav-link">Locations</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative pt-44 pb-20 px-6 lg:px-10 bg-grain overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <p class="font-mono text-xs uppercase tracking-[0.25em] text-gold mb-6 reveal">Est. Multan, Pakistan</p>
+    <h1 class="font-display font-light text-[13vw] sm:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 reveal">
+      Six brands.<br><span class="text-gold">One</span> holding.
+    </h1>
+    <p class="max-w-xl text-stone text-lg leading-relaxed mb-10 reveal">
+      Built from a single storefront into a portfolio spanning retail, custom gifting,
+      fragrance, jewellery, and digital growth — every brand under this roof is run with
+      the same discipline: know the customer, control the craft, and never stop building.
+    </p>
+    <div class="flex flex-wrap gap-4 reveal">
+      <a href="brands.html" class="btn-gold">View the Portfolio →</a>
+      <a href="contact.html" class="btn-outline">Get in Touch</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ TICKER (signature element) ============ -->
+<div class="ticker-wrap py-5">
+  <div class="ticker-track">
+    <!-- duplicated set x2 for seamless loop -->
+    <div class="ticker-item text-sm text-stone">
+      <span class="text-gold px-6">ASIA TRADERS</span><span class="text-line">／</span>
+      <span class="px-6">MOBILE ACCESSORIES</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">ASIA STORE</span><span class="text-line">／</span>
+      <span class="px-6">CUSTOM GIFTING</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">THE CUSTOMIZER</span><span class="text-line">／</span>
+      <span class="px-6">CUSTOM GIFTING</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">SCENTS BY ASIA</span><span class="text-line">／</span>
+      <span class="px-6">FRAGRANCE</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">EAGER CUSTOM</span><span class="text-line">／</span>
+      <span class="px-6">GLOBAL JEWELLERY</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">ASIA DIGITAL</span><span class="text-line">／</span>
+      <span class="px-6">SHOPIFY · ADS · CONSULTANCY</span><span class="text-gold px-6">✦</span>
+    </div>
+    <div class="ticker-item text-sm text-stone" aria-hidden="true">
+      <span class="text-gold px-6">ASIA TRADERS</span><span class="text-line">／</span>
+      <span class="px-6">MOBILE ACCESSORIES</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">ASIA STORE</span><span class="text-line">／</span>
+      <span class="px-6">CUSTOM GIFTING</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">THE CUSTOMIZER</span><span class="text-line">／</span>
+      <span class="px-6">CUSTOM GIFTING</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">SCENTS BY ASIA</span><span class="text-line">／</span>
+      <span class="px-6">FRAGRANCE</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">EAGER CUSTOM</span><span class="text-line">／</span>
+      <span class="px-6">GLOBAL JEWELLERY</span><span class="text-gold px-6">✦</span>
+      <span class="text-gold px-6">ASIA DIGITAL</span><span class="text-line">／</span>
+      <span class="px-6">SHOPIFY · ADS · CONSULTANCY</span><span class="text-gold px-6">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STATS ============ -->
+<section class="px-6 lg:px-10 py-16 border-b border-line">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-line">
+    <div class="px-4 sm:px-8 reveal">
+      <p class="font-mono text-4xl sm:text-5xl text-gold mb-2">06</p>
+      <p class="text-xs uppercase tracking-widest text-stone">Brands Under One Roof</p>
+    </div>
+    <div class="px-4 sm:px-8 reveal">
+      <p class="font-mono text-4xl sm:text-5xl text-gold mb-2">03</p>
+      <p class="text-xs uppercase tracking-widest text-stone">Physical Storefronts</p>
+    </div>
+    <div class="px-4 sm:px-8 reveal">
+      <p class="font-mono text-4xl sm:text-5xl text-gold mb-2">02</p>
+      <p class="text-xs uppercase tracking-widest text-stone">Countries Served Online</p>
+    </div>
+    <div class="px-4 sm:px-8 reveal">
+      <p class="font-mono text-4xl sm:text-5xl text-gold mb-2">01</p>
+      <p class="text-xs uppercase tracking-widest text-stone">Vision Driving All of It</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO PREVIEW ============ -->
+<section class="px-6 lg:px-10 py-24">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4 reveal">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.25em] text-gold mb-4">The Holdings</p>
+        <h2 class="font-display text-4xl sm:text-5xl">A portfolio built brand by brand.</h2>
+      </div>
+      <a href="brands.html" class="font-mono text-xs uppercase tracking-widest text-stone hover:text-gold transition-colors whitespace-nowrap">View All Holdings →</a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line">
+      <!-- Card 1 -->
+      <a href="https://www.asiatraders1.com/" target="_blank" rel="noopener" class="card-cert p-8 flex flex-col justify-between min-h-[260px] reveal">
+        <div>
+          <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 01</p>
+          <h3 class="font-display text-2xl mb-2">Asia Traders</h3>
+          <p class="text-sm text-stone">Mobile Accessories</p>
+        </div>
+        <span class="font-mono text-xs text-gold mt-6">Visit Site →</span>
+      </a>
+      <!-- Card 2 -->
+      <a href="https://asiastore.com.pk/" target="_blank" rel="noopener" class="card-cert p-8 flex flex-col justify-between min-h-[260px] reveal">
+        <div>
+          <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 02</p>
+          <h3 class="font-display text-2xl mb-2">Asia Store</h3>
+          <p class="text-sm text-stone">Custom Gifting</p>
+        </div>
+        <span class="font-mono text-xs text-gold mt-6">Visit Site →</span>
+      </a>
+      <!-- Card 3 -->
+      <a href="https://www.thecustomizer.com.pk/" target="_blank" rel="noopener" class="card-cert p-8 flex flex-col justify-between min-h-[260px] reveal">
+        <div>
+          <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 03</p>
+          <h3 class="font-display text-2xl mb-2">The Customizer</h3>
+          <p class="text-sm text-stone">Custom Gifting</p>
+        </div>
+        <span class="font-mono text-xs text-gold mt-6">Visit Site →</span>
+      </a>
+      <!-- Card 4 -->
+      <div class="card-cert p-8 flex flex-col justify-between min-h-[260px] reveal">
+        <div>
+          <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 04</p>
+          <h3 class="font-display text-2xl mb-2">Scents by Asia</h3>
+          <p class="text-sm text-stone">Fragrance</p>
+        </div>
+        <span class="font-mono text-xs text-stone mt-6">Storefront in Progress</span>
+      </div>
+      <!-- Card 5 -->
+      <a href="https://www.etsy.com/shop/EagerCustom" target="_blank" rel="noopener" class="card-cert p-8 flex flex-col justify-between min-h-[260px] reveal">
+        <div>
+          <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 05</p>
+          <h3 class="font-display text-2xl mb-2">Eager Custom</h3>
+          <p class="text-sm text-stone">Global Custom Jewellery</p>
+        </div>
+        <span class="font-mono text-xs text-gold mt-6">Visit Shop →</span>
+      </a>
+      <!-- Card 6 -->
+      <a href="services.html" class="card-cert p-8 flex flex-col justify-between min-h-[260px] reveal">
+        <div>
+          <p class="font-mono text-xs text-golddeep mb-6">HOLDING NO. 06</p>
+          <h3 class="font-display text-2xl mb-2">Asia Digital</h3>
+          <p class="text-sm text-stone">Shopify · Ads · Consultancy</p>
+        </div>
+        <span class="font-mono text-xs text-gold mt-6">Explore Services →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES TEASER ============ -->
+<section class="px-6 lg:px-10 py-24 bg-panel border-y border-line">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal">
+      <p class="font-mono text-xs uppercase tracking-[0.25em] text-gold mb-4">Asia Digital</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-6 leading-tight">The growth engine behind every brand.</h2>
+      <p class="text-stone leading-relaxed mb-8 max-w-lg">
+        Every storefront in this portfolio is built and marketed in-house. Asia Digital
+        packages that same playbook — Shopify builds, paid social, and hands-on
+        consultancy — for outside brands ready to scale.
+      </p>
+      <a href="services.html" class="btn-outline">See What We Offer →</a>
+    </div>
+    <div class="grid grid-cols-2 gap-px bg-line reveal">
+      <div class="bg-void p-6"><p class="font-mono text-xs text-gold mb-1">01</p><p class="text-sm">Shopify Store Setup &amp; Design</p></div>
+      <div class="bg-void p-6"><p class="font-mono text-xs text-gold mb-1">02</p><p class="text-sm">Meta Ads Management</p></div>
+      <div class="bg-void p-6"><p class="font-mono text-xs text-gold mb-1">03</p><p class="text-sm">TikTok Ads Management</p></div>
+      <div class="bg-void p-6"><p class="font-mono text-xs text-gold mb-1">04</p><p class="text-sm">Product Marketing</p></div>
+      <div class="bg-void p-6"><p class="font-mono text-xs text-gold mb-1">05</p><p class="text-sm">Business Consultancy</p></div>
+      <div class="bg-void p-6"><p class="font-mono text-xs text-gold mb-1">06</p><p class="text-sm">Brand Strategy</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="px-6 lg:px-10 py-28 text-center">
+  <div class="max-w-2xl mx-auto reveal">
+    <h2 class="font-display text-4xl sm:text-5xl mb-6">Have a brand in mind?</h2>
+    <p class="text-stone mb-10">Whether it's a custom order, a partnership, or a growth project for Asia Digital — let's talk.</p>
+    <a href="contact.html" class="btn-gold">Start a Conversation →</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-line px-6 lg:px-10 py-16">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
+    <div>
+      <p class="font-display text-xl mb-4">ASIA <span class="text-gold">HOLDINGS</span></p>
+      <p class="text-sm text-stone leading-relaxed">A portfolio of six brands built in Multan, Pakistan — retail, custom gifting, fragrance, jewellery, and digital growth.</p>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Holdings</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="https://www.asiatraders1.com/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Asia Traders</a></li>
+        <li><a href="https://asiastore.com.pk/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Asia Store</a></li>
+        <li><a href="https://www.thecustomizer.com.pk/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">The Customizer</a></li>
+        <li><a href="brands.html" class="hover:text-gold transition-colors">Scents by Asia</a></li>
+        <li><a href="https://www.etsy.com/shop/EagerCustom" target="_blank" rel="noopener" class="hover:text-gold transition-colors">Eager Custom</a></li>
+        <li><a href="services.html" class="hover:text-gold transition-colors">Asia Digital</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Site</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="about.html" class="hover:text-gold transition-colors">About</a></li>
+        <li><a href="locations.html" class="hover:text-gold transition-colors">Locations</a></li>
+        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-mono text-xs uppercase tracking-widest text-gold mb-5">Connect</p>
+      <ul class="space-y-3 text-sm text-stone">
+        <li><a href="mailto:hello@asiaholdings.example" class="hover:text-gold transition-colors">hello@asiaholdings.example</a></li>
+        <li><a href="tel:+920000000000" class="hover:text-gold transition-colors">+92 000 000 0000</a></li>
+        <li class="text-stone">Multan, Punjab, Pakistan</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hairline mb-8"></div>
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone font-mono">
+    <p>© <span id="current-year"></span> Asia Holdings. All rights reserved.</p>
+    <p>Built with intent — black &amp; gold, by design.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
